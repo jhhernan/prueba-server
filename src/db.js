@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
  } 
 
 function initDatabase(){ 
-    mongoose.connect('mongodb://localhost:27017/voteDB', options);
+    mongoose.connect(process.env.MONGO_URL, options);
 
     const {connection} = mongoose;
 
